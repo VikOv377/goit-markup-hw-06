@@ -522,18 +522,10 @@ img {
     color: var(--color-hover);
 }
 
-.address-link {
-    display: block;
-}
-
 .footer-logo {
     display: block;
     padding: 0;
     margin-bottom: 20px;
-}
-
-.footer-adress-list {
-    display: block;
 }
 
 .footer-adress-list .footer-adress-item:not(:last-child) {
@@ -1008,11 +1000,17 @@ textarea:focus {
     background-position: center;
     background-repeat: no-repeat;
     border-color: transparent;
-    background-origin: border-box;
+    background-origin: content-box;
 }
 
 .checkbox:focus + .agreement-text::before {
     border-color: var(--color-hover);
 }
 
+.checkbox:not(:checked) + .agreement-text::before {
+    border-color: black;
+}
 
+/*.checkbox:focus:not(:checked) + .agreement-text::before {
+    border-color: var(--color-hover);
+}*/
