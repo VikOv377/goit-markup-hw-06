@@ -555,6 +555,10 @@ img {
     fill: currentColor;
 }
 
+.subscribe {
+    display: flex;
+}
+
 .email-input {
     width: 358px;
     height: 50px;
@@ -582,6 +586,9 @@ img {
 
 .email-submit {
     padding: 10px 28px 10px 29px;
+
+    width: 200px;
+    height: 50px;
 }
 
 .subscibe-icon {
@@ -934,9 +941,13 @@ textarea:focus {
 .agreement {
     margin-top: 20px;
     margin-bottom: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.agreement-label {
+.agreement-text {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -944,7 +955,6 @@ textarea:focus {
 
 .agreement-link {
     color: var(--blue-color);
-
     margin-left: 5px;
 }
 
@@ -956,26 +966,27 @@ textarea:focus {
     margin-right: auto;
 }
 
-.checkbox {
-    position: absolute;
-}
+.agreement-text::before {
+    content: '';
 
-.checkbox-icon {
-    display: inline-block;
+    display: block;
+
     width: 16px;
     height: 15px;
 
+    margin-right: 8px;
+
     border: 2px solid var(--black-text-color);
-    border-radius: 4px;
-    margin-right: 7px;
+    border-radius: 3px;
 }
 
-.checkbox:checked + .checkbox-icon {
+.checkbox:checked + .agreement-text::before,
+.checkbox:focus + .agreement-text::before {
     background-color: var(--color-hover);
     background-image: url('../images/icon-check.svg');
     background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
     border-color: transparent;
     background-origin: border-box;
 }
-
-
