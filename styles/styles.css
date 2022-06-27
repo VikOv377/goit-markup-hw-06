@@ -7,6 +7,7 @@
     --blue-color: #2196F3;
     --hero-color: #2F303A;
     --color-hover: #2196F3;
+    --color-accent-hover: #188CE8;
     --color-our-team-section: #F5F4FA;
     --color-of-portfolio-box: #EEEEEE;
     --gap-after-h2: 50px;
@@ -286,8 +287,14 @@ img {
     padding: 10px 32px;
     margin-left: auto;
     margin-right: auto;
+
+    transition: background-color var(--transitions-time) var(--timing-function) var(--delay);
 }
 
+.button:hover,
+.button:focus {
+    background-color: var(--color-accent-hover);
+}
 /* Секция "О нас" */
 
 .section-title-h2 {
@@ -991,6 +998,9 @@ textarea:focus {
 
     border: 2px solid var(--black-text-color);
     border-radius: 3px;
+
+    transition:
+    border var(--transitions-time) var(--timing-function) var(--delay);
 }
 
 .checkbox:checked + .agreement-text::before,
@@ -1004,12 +1014,16 @@ textarea:focus {
 }
 
 .checkbox:focus + .agreement-text::before {
-    border-color: var(--color-hover);
+    border: 2px solid var(--color-hover);
 }
 
-.checkbox:not(:checked) + .agreement-text::before {
-    border-color: black;
+.checkbox:hover + .agreement-text::before {
+    border: 2px solid var(--color-hover);
 }
+
+/*.checkbox:not(:checked) + .agreement-text::before {
+    border-color: black;
+}*/
 
 /*.checkbox:focus:not(:checked) + .agreement-text::before {
     border-color: var(--color-hover);
