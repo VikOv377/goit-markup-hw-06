@@ -571,10 +571,20 @@ img {
 
     margin-right: 12px;
 
+    outline: none;
+
     color: var(--white-text-color);
     font-size: 16px;
     line-height: 1.25;
     letter-spacing: 0.03em;
+
+    transition:
+    border-color var(--transitions-time) var(--timing-function) var(--delay);
+}
+
+.email-input:hover,
+.email-input:focus {
+    border-color: var(--color-hover);
 }
 
 .subscribe input::placeholder {
@@ -584,14 +594,23 @@ img {
     color: rgba(255, 255, 255, 0.6);
 }
 
-.email-submit {
-    padding: 10px 28px 10px 29px;
+.email-submit-button {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    padding: 10px 62px 10px 29px;
 
     width: 200px;
     height: 50px;
 }
 
 .subscibe-icon {
+    position: absolute;
+    right: 28px;
     margin-left: 10px;
 }
 
@@ -869,10 +888,12 @@ textarea {
 .form-field {
     display: flex;
     flex-direction: column;
-
-    margin-bottom: 10px;
-
+    
     transition: fill var(--transitions-time) var(--timing-function) var(--delay);
+}
+
+.form-field:nth-child(-n + 3) {
+    margin-bottom: 10px;
 }
 
 .form-input {
@@ -910,16 +931,16 @@ textarea {
     color: rgba(117, 117, 117, 0.5);
 }
 
+.input-wrap {
+    position: relative;
+}
+
 .modal-icon {
     position: absolute;
 
     top: 50%;
     left: 15px;
     transform: translateY(-50%);
-}
-
-.input-wrap {
-    position: relative;
 }
 
 .form-field:hover,
@@ -981,12 +1002,17 @@ textarea:focus {
 }
 
 .checkbox:checked + .agreement-text::before,
-.checkbox:focus + .agreement-text::before {
+.checkbox:focus:checked + .agreement-text::before {
     background-color: var(--color-hover);
     background-image: url('../images/icon-check.svg');
-    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     border-color: transparent;
     background-origin: border-box;
 }
+
+.checkbox:focus + .agreement-text::before {
+    border-color: var(--color-hover);
+}
+
+
