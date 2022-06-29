@@ -71,7 +71,7 @@
                           <use href="./images/icons.svg#antenna"></use>
                       </svg>
                   </div>
-                  <h3 class="about-us-header header-h3">Внимание к деталям</h3>
+                  <h3 class="about-us-header item-title">Внимание к деталям</h3>
                   <p class="about-us-description">Идейные соображения, а также начало повседневной работы по формированию позиции.</p>
               </li>
               <li class="about-us-list-item card-item">
@@ -80,7 +80,7 @@
                         <use href="./images/icons.svg#clock"></use>
                     </svg>
                 </div>
-                <h3 class="about-us-header header-h3">Пунктуальность</h3>
+                <h3 class="about-us-header item-title">Пунктуальность</h3>
                 <p class="about-us-description">Задача организации, в особенности же рамки и место обучения кадров влечет за собой.</p>
               </li>
               <li class="about-us-list-item card-item">
@@ -89,7 +89,7 @@
                         <use href="./images/icons.svg#diagram"></use>
                     </svg>
                 </div>
-                <h3 class="about-us-header header-h3">Планирование</h3>
+                <h3 class="about-us-header item-title">Планирование</h3>
                 <p class="about-us-description">Равным образом консультация с широким активом в значительной степени обуславливает.</p>
               </li>
               <li class="about-us-list-item card-item">
@@ -98,7 +98,7 @@
                         <use href="./images/icons.svg#astronaut"></use>
                     </svg>
                 </div>
-                <h3 class="about-us-header header-h3">Современные технологии</h3>
+                <h3 class="about-us-header item-title">Современные технологии</h3>
                 <p class="about-us-description">Значимость этих проблем настолько очевидна, что реализация плановых заданий.</p>
               </li>
             </ul>
@@ -116,7 +116,7 @@
                   <div class="what-we-do-thumb">
                     <img src="./images/img1.jpg" alt="Пишем код" width="370" height="294">
                     <div class="what-we-do-overlay">
-                     <h3 class="header-h3 what-we-do-description">Десктопные приложения</h3>
+                     <h3 class="item-title what-we-do-description">Десктопные приложения</h3>
                     </div>
                   </div>
                 </li>
@@ -125,7 +125,7 @@
                    <div class="what-we-do-thumb">
                      <img src="./images/img2.jpg" alt="Создаем дизайн продукта" width="370" height="294">
                           <div class="what-we-do-overlay">
-                        <h3 class="header-h3 what-we-do-description">Мобильные приложения</h3>
+                        <h3 class="item-title what-we-do-description">Мобильные приложения</h3>
                        </div>
                    </div>
                 </li>
@@ -134,7 +134,7 @@
                    <div class="what-we-do-thumb">
                      <img src="./images/img3.jpg" alt="Выбираем лучший вариант" width="370" height="294">
                        <div class="what-we-do-overlay">
-                        <h3 class="header-h3 what-we-do-description">Дизайнерские решения</h3>
+                        <h3 class="item-title what-we-do-description">Дизайнерские решения</h3>
                        </div>
                    </div>
                 </li>
@@ -411,7 +411,7 @@
         </div>
 
          <div class="footer-part">
-            <p class="footer-header header-h3">Присоединяйтесь</p>
+            <p class="footer-header item-title">Присоединяйтесь</p>
             <ul class="list card-set our-team-social-list">
                 <li class="our-team-social-item card-item">
                     <a class="our-team-social-link" aria-label="Ссылка на Instagram" href="https://www.instagram.com/"
@@ -453,11 +453,11 @@
          </div>
 
          <div class="footer-part">
-           <p class="footer-header header-h3">Подпишитесь на рассылку</p>
+           <p class="footer-header item-title">Подпишитесь на рассылку</p>
            <form class="subscribe" autocomplete="on">
                <label for="email" class="visually-hidden">Email</label>
                <input class="email-input" type="email" name="email" id="email" placeholder="E-mail" />
-               <button class="button email-submit-button" type="submit">Подписаться
+               <button class="button" type="submit">Подписаться
                    <svg class="subscibe-icon" width="24" height="24">
                        <use href="./images/icons.svg#icon-send"></use>
                    </svg>
@@ -481,6 +481,7 @@
           <b class="modal-header">Оставьте свои данные, мы вам перезвоним</b>
 
           <form class="modal-form" autocomplete="on">
+            <div class="form-wrapper">
             <div class="form-field">
               <label class="form-label" for="name">Имя</label>
               <div class="input-wrap">
@@ -515,12 +516,11 @@
               <label class="form-label" for="comments">Комментарий</label>
               <textarea name="comments" id="comments" rows="10" placeholder="Введите текст"></textarea>
             </div>
-
-            <div class="form-field agreement">
+            </div>
+            <div class="form-agreement">
                  <input type="checkbox" name="agree" value="agree" id="agree" class="checkbox visually-hidden" />
                  <label for="agree" class="agreement-text">
-                  Соглашаюсь с рассылкой и принимаю
-                  <a href="./terms.html" class="agreement-link">Условия договора</a>
+                  Соглашаюсь с рассылкой и принимаю&nbsp;<a href="./terms.html" class="link agreement-link">Условия договора</a>
                 </label>
             </div>
 

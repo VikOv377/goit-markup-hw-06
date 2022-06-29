@@ -268,6 +268,9 @@ img {
 }
 
 .button {
+    display: flex;
+    justify-content: center;
+
     font-family: inherit;
     font-weight: 700;
     font-size: 16px;
@@ -277,6 +280,7 @@ img {
     text-align: center;
     letter-spacing: 0.06em;
     color: var(--white-text-color);
+    min-width: 200px;
 
     background-color: var(--blue-color);
     border: none;
@@ -323,7 +327,7 @@ img {
     margin-bottom: 10px;
 }
 
-.header-h3 {
+.item-title {
     font-size: 14px;
     font-weight: 700;
     line-height: 1.14;
@@ -593,23 +597,7 @@ img {
     color: rgba(255, 255, 255, 0.6);
 }
 
-.email-submit-button {
-    position: relative;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-
-    padding: 10px 62px 10px 29px;
-
-    width: 200px;
-    height: 50px;
-}
-
 .subscibe-icon {
-    position: absolute;
-    right: 28px;
     margin-left: 10px;
 }
 
@@ -891,8 +879,12 @@ textarea {
     transition: fill var(--transitions-time) var(--timing-function) var(--delay);
 }
 
-.form-field:nth-child(-n + 3) {
+.form-field:not(:last-child) {
     margin-bottom: 10px;
+}
+
+.form-wrapper {
+    margin-bottom: 20px;
 }
 
 .form-input {
@@ -958,8 +950,7 @@ textarea:focus {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   }
 
-.agreement {
-    margin-top: 20px;
+.form-agreement {
     margin-bottom: 30px;
 
     display: flex;
@@ -971,19 +962,14 @@ textarea:focus {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    cursor: pointer;
 }
 
 .agreement-link {
     color: var(--blue-color);
-    margin-left: 5px;
-}
-
-.form-submit {
-    display: block;
-    
-    padding: 10px 55px 10px 56px;
-    margin-left: auto;
-    margin-right: auto;
+    border-bottom: 1px solid currentColor;
+    line-height: 1.0;
 }
 
 .agreement-text::before {
@@ -1009,7 +995,7 @@ textarea:focus {
     background-image: url('../images/icon-check.svg');
     background-position: center;
     background-repeat: no-repeat;
-    border-color: transparent;
+    border: 2px solid var(--color-hover);
     background-origin: content-box;
 }
 
@@ -1021,10 +1007,3 @@ textarea:focus {
     border: 2px solid var(--color-hover);
 }
 
-/*.checkbox:not(:checked) + .agreement-text::before {
-    border-color: black;
-}*/
-
-/*.checkbox:focus:not(:checked) + .agreement-text::before {
-    border-color: var(--color-hover);
-}*/
